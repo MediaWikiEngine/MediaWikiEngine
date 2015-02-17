@@ -73,10 +73,8 @@ public final class WikiMediaEngine implements Serializable
             logger.log(Level.INFO, "API Location not valid or present. Using the one from configuration file.");
             StringBuilder builder = new StringBuilder();
             builder.append(getDefaultConfig().getString("wikimedia.api.protocol")).append("://");
-            builder.append(getDefaultConfig().getString("wikimedia.api.domain"));
-            builder.append("/");
-            builder.append(getDefaultConfig().getString("wikimedia.api.path"));
-            builder.append("/");
+            builder.append(getDefaultConfig().getString("wikimedia.api.domain")).append("/");
+            builder.append(getDefaultConfig().getString("wikimedia.api.path")).append("/");
             builder.append(getDefaultConfig().getString("wikimedia.api.file"));
 
             try
