@@ -29,13 +29,14 @@ import com.github.mediawikiengine.exceptions.EngineInitFailed;
 import com.github.mediawikiengine.http.Connection;
 import com.github.mediawikiengine.util.Credentials;
 
+import java.io.Serializable;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public final class WikiMediaEngine extends Engine
+public final class WikiMediaEngine implements Serializable
 {
 
     protected static Locale currentLocale = Locale.getDefault();
